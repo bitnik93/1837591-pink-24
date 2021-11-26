@@ -1,6 +1,6 @@
 # Личный проект «Пинк» 
 
-* Студент: [Никита Сысоев](https://up.htmlacademy.ru/adaptive/24/user/1837591).
+* Студент: `Никита Сысоев`[https://up.htmlacademy.ru/adaptive/24/user/1837591].
 * Наставник: `Михаил Данюшин`[https://htmlacademy.ru/profile/id225742].
 
 ---
