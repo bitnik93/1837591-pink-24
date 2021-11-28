@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body class="page__body">
-    <header class="page-header">
+  <body class="body">
+    <header class="header">
       <nav class="main-nav">
-        <div class="main-nav__list user-list">
-          <a class="user-list__logo">
-            <img class="user-list__logo-image"></img>
-            <img class="user-list__logo-title" src="#" width="74" height="23" alt="Логотип Pink">
-          </a>
-        </div>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
+        <a class="user-list__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img></img>
+          <img src="#" width="74" height="23" alt="Логотип Pink">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a>Главная</a>
@@ -29,61 +28,55 @@
               <a href="#">HTML Academy</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main>
       <h1 class="visually-hidden">Приложение Pink</h1>
       <section class="intro">
-        <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
-        <div class="intro__container wrapper-phone">
-          <div class="wrapper__phone">
-            <img class="wrapper__container" src="#">
+        <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
+          <div class="intro__phone">
+            <img class="intro__container" src="#">
             <div>
-              <img class="wrapper__screen" src="#">
+              <img class="intro__screen" src="#">
             </div>
           </div>
-        </div>
-        <div class="intro__links">
-          <a class="intro__link link" href="#">Скачать приложение</a>
-          <ul>
+          <ul class="intro__links">
+            <li class="intro__link">intro__link</li>
+              <a class="link" href="#">Скачать приложение</a>
             <li>
-              <a class="intro__icon" href="#">iPhone</a>
+              <a class="intro__icon" href="https://www.apple.com/ru/app-store/">iPhone</a>
             </li>
             <li>
-              <a class="intro__icon" href="#">Android</a>
+              <a class="intro__icon" href="https://www.android.com/">Android</a>
             </li>
             <li>
-              <a class="intro__icon" href="#">Windows</a>
+              <a class="intro__icon" href="https://www.microsoft.com/ru-ru/windows/windows-11">Windows</a>
             </li>
           </ul>
-          <p class="intro__desc desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </div>
+          <p class="intro__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
       <section class="info">
         <div class="info__container">
-          <h2 class="info__title">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h2>
-          <ul class="info-list list-info">
-            <li class="list-info__item">
-              <h3 class="list-info__title">Поднимает настроение</h3>
-              <p class="list-info__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <h2 class="info__title title">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h2>
+          <ul class="info-list">
+            <li class="info-list__item">
+              <h3 class="info-list__title">Поднимает настроение</h3>
+              <p class="info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="list-info__item">
-              <h3 class="list-info__title">Меняет мир вокруг</h3>
+            <li class="info-list__item">
+              <h3 class="info-list__title">Меняет мир вокруг</h3>
               <p class="info-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="list-info__item">
-              <h3 class="list-info__title">Заводит новых друзей</h3>
-              <p class="list-info__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <li class="info-list__item">
+              <h3 class="info-list__title">Заводит новых друзей</h3>
+              <p class="info-list__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </div>
-          <div class="info__wrapper wrapper-info">
-          <div class="wrapper-info__phone">
-            <img class="wrapper-info__container" src="#">
-            <div>
-              <img class="wrapper-info__screen" src="#">
-            </div>
+        <div class="info__wrapper__phone">
+          <img class="info__wrapper__container" src="#">
+          <div>
+            <img class="info__wrapper__screen" src="#">
           </div>
         </div>
       </section>
@@ -97,11 +90,11 @@
             </blockquote>
           </div>
           <div>
-            <p class="reviews__toggles slider__toggle">
-              <button class="slider-toggle slider-toggle-current" type="button">1</button>
+            <div class="reviews__toggles slider__toggle">
+              <button class="slider-toggle slider-toggle--current" type="button">1</button>
               <button class="slider-toggle" type="button">2</button>
               <button class="slider-toggle" type="button">3</button>
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -113,15 +106,15 @@
             <dl class="price__list">
               <div class="price__item">
                 <dt class="price__desc">Розовый фильтр</dt>
-                <dd class="price_option"></dd>
+                <dd class="price__option"></dd>
               </div>
               <div class="price__item">
                 <dt class="price__desc">Смайлики</dt>
-                <dd class="price_option"></dd>
+                <dd class="price__option"></dd>
               </div>
               <div class="price__item">
                 <dt class="price__desc">Комментарии</dt>
-                <dd class="price_option"></dd>
+                <dd class="price__option"></dd>
               </div>
             </dl>
           </div>
@@ -167,54 +160,65 @@
             <button class="slider__toggle">3</button>
           </p>
         </div>
-      </section class="contacts">
+      </section>
+      <section class="contacts">
         <div class="contacts__wrapper">
-          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-          <div class="contacts__phone">
-            <span class="contacts__call">Звоните:</span>
-            <a class="contacts__number" href="tel:+78125556666">+7 (812) 55566-66</a>
-          </div>
-          <div>
-            <span class="contacts__email">Пишите:</span>
-            <a class="contacts__html" href="#">mail@htmlacademy.ru</a>
-          </div>
-          <div>
-            <span class="contacts__guests">Приезжайте в гости:</span>
-            <a class="contacts__adress" href="#">Ул. Большая конюшенная 19/8</a>
-          </div>
-          <map name="contacts__map">
-            <area shape="circle" coords="75,75,75" href="left.html">
-            <area shape="circle" coords="275,75,75" href="right.html">
-          </map>
-          <img usemap="#primary" src="#" alt="320 x 200 pic">
+          <h2 class="contacts__title title">Остались вопросы? Свяжитесь с нами!</h2>
+          <dl class="contacts__list">
+            <div class="contacts__phone">
+              <dd class="contacts__call">Звоните:</dd>
+              <dt>
+                <a class="contacts__number" href="tel:+78125556666">+7 (812) 55566-66</a>
+              </dt>
+            </div>
+            <div>
+              <dd class="contacts__email">Пишите:</dd>
+              <dt>
+                <a class="contacts__html" href="#">mailto@htmlacademy.ru</a>
+              </dt>
+            </div>
+            <div>
+              <dd class="contacts__guests">Приезжайте в гости:</dd>
+              <dt>
+                <adress class="contacts__adress" href="#">Ул. Большая конюшенная 19/8</adress>
+              </dt>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6157114524065!2d30.324119920704568!3d59.93851863142024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638097785299!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </dl>
         </div>
+      </section>
     </main>
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__list user-list">
-          <a class="user-list__logo">
-            <img class="user-list__logo-image"></img>
-            <img class="user-list__logo-title" src="#git" width="74" height="23" alt="Логотип Pink">
-          </a>
-        </div>
-        <div class="page-footer__links">
-          <a class="page-footer__twitter" href="#">
+    <footer class="footer">
+      <div class="user-list">
+        <a class="user-list__logo">
+          <img class="user-list__logo-image"></img>
+          <img class="user-list__logo-title" src="#git" width="74" height="23" alt="Логотип Pink">
+        </a>
+      </div>
+      <ul class="footer__links">
+        <li>
+          <a class="footer__twitter" href="#">
             <span class="visually-hidden">twitter</span>
           </a>
-          <a class="page-footer__facebook" href="#">
+        </li>
+        <li>
+          <a class="footer__facebook" href="https://www.facebook.com/htmlacademy/">
             <span class="visually-hidden">facebook</span>
           </a>
-          <a class="page-footer__youtube" href="#">
+        </li>
+        <li>
+          <a class="footer__youtube" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
             <span class="visually-hidden">youtube</span>
           </a>
-        </div>
-        <div class="copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="#">
+        </li>
+        <li>
+          <a class="footer__copyright-link" href="https://www.htmlacademy.ru"></a>
+            <p class="footer__copyright-text">Разработано</p>
             <span class="visually-hidden">HTML academy.</span>
+            <!-- <svg></svg> -->
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>
