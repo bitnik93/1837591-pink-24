@@ -1,0 +1,51 @@
+.catalog {
+  background-image: url("../../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-intro__title {
+  margin: 20px;
+  margin-top: 84px;
+  margin-bottom: 348px;
+}
+
+.catalog__text {
+  .font-family-mixin;
+  .font-mixin(14px; 30px);
+  color: @base-text-color;
+  margin: 20px;
+}
+
+.catalog__list {
+  list-style-type: none;
+  .list-reset;
+  margin: 20px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog-item {
+  .list-reset;
+  margin: 20px;
+}
+
+.catalog__review {
+  .list-reset;
+}
+
+.catalog__author-name {
+  .font-mixin();
+  font-style: normal;
+}
+
+.catalog__author-time {
+  .font-family-mixin;
+  .font-mixin(12px; 24px);
+  color: @base-text-color;
+  text-transform: uppercase;
+}

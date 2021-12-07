@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <header class="header">
-      <nav class="main-nav">
+      <nav class="main-nav header__container">
         <a class="user-list__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <img></img>
           <img src="#" width="74" height="23" alt="Логотип Pink">
@@ -22,7 +23,7 @@
               <a href="catalog.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="contest.html">Конкурс</a>
+              <a href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
               <a href="#">HTML Academy</a>
@@ -30,9 +31,9 @@
           </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Приложение Pink</h1>
-      <section class="intro">
+      <section class="intro main__cointainer">
         <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
           <div class="intro__phone">
             <img class="intro__container" src="#">
@@ -99,60 +100,38 @@
         </div>
       </section>
       <section class="price">
-        <div class="price__wrapper slider-price">
-          <div class="price__container slider-price__list">
-            <h4 class="price__title">База</h4>
-            <p class="price__cost">1,99 USD</p>
-            <dl class="price__list">
-              <div class="price__item">
-                <dt class="price__desc">Розовый фильтр</dt>
-                <dd class="price__option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Смайлики</dt>
-                <dd class="price__option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Комментарии</dt>
-                <dd class="price__option"></dd>
-              </div>
-            </dl>
-          </div>
-          <div class="price__container slider-price__list">
-            <h4 class="price__title">СТАНДАРТ</h4>
-            <p class="price__cost">3,99 USD</p>
-            <dl class="price__list">
-              <div class="price__item">
-                <dt class="price__desc">Розовый фильтр</dt>
-                <dd class="price_option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Смайлики</dt>
-                <dd class="price_option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Комментарии</dt>
-                <dd class="price_option"></dd>
-              </div>
-            </dl>
-          </div>
-          <div class="price__container slider-price__list">
-            <h4 class="price__title">Анлим</h4>
-            <p class="price__cost">9,99 USD</p>
-            <dl class="price__list">
-              <div class="price__item">
-                <dt class="price__desc">Розовый фильтр</dt>
-                <dd class="price_option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Смайлики</dt>
-                <dd class="price_option"></dd>
-              </div>
-              <div class="price__item">
-                <dt class="price__desc">Комментарии</dt>
-                <dd class="price_option"></dd>
-              </div>
-            </dl>
+        <div class="price__wrapper ">
+          <div class="price__container slider-price">
+            <table class="price__table">
+              <thead class="price__head">
+                <tr class="price__row">
+                  <td class="price__title"></td>
+                  <td class="price__title">База<p class="price__cost">1.99 usd</p></td>
+                  <td class="price__title">Стандарт<p class="price__cost">3.99 usd</p></td>
+                  <td class="price__title">Анлим<p class="price__cost">9.99 usd</p></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="price__option">Розовый фильтр</td>
+                  <td class="price__option">Нет</td>
+                  <td class="price__option">Нет</td>
+                  <td class="price__option">Нет</td>
+                </tr>
+                <tr>
+                  <td class="price__option">Смайлики</td>
+                  <td class="price__option">Нет</td>
+                  <td class="price__option">Нет</td>
+                  <td class="price__option">Нет</td>
+                </tr>
+                <tr>
+                  <td class="price__option">Комментарии</td>
+                  <td class="price__option">Да</td>
+                  <td class="price__option">Нет</td>
+                  <td class="price__option">Нет</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <p class="price__toggles slider__toggles">
             <button class="slider__toggle">1</button>
@@ -168,7 +147,7 @@
             <div class="contacts__phone">
               <dd class="contacts__call">Звоните:</dd>
               <dt>
-                <a class="contacts__number" href="tel:+78125556666">+7 (812) 55566-66</a>
+                <a class="contacts__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
               </dt>
             </div>
             <div>
@@ -183,7 +162,7 @@
                 <address class="contacts__address">Ул. Большая конюшенная 19/8</address>
               </dt>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6157114524065!2d30.324119920704568!3d59.93851863142024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638097785299!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6157114524065!2d30.324119920704568!3d59.93851863142024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638097785299!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           </dl>
         </div>
       </section>
