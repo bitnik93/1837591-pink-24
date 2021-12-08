@@ -4,6 +4,13 @@
   align-items: center;
 }
 
+.info__wrapper-screen {
+  margin: 20px;
+  background-image: url("../../img/phone-info.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .info__title {
   color: @base-text-color;
   padding: 46px 20px 70px 20px;
@@ -23,10 +30,10 @@
 .info-list__title {
   .list-reset;
   .font-family-mixin;
-  .font-mixin(18px; 24px);
+  .set-font(18px; 24px);
 }
 
 .info-list__description {
   .list-reset;
-  .font-mixin(14px; 24px);
+  .set-font(14px; 24px);
 }

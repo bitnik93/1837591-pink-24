@@ -1,13 +1,22 @@
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background: @base-bg-color;
+  .font-family-mixin;
+  .set-font;
   font-size: 14px;
   color: @base-text-color;
+  box-sizing: border-box;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  color: @base-text-white;
+  text-decoration: none;
 }
