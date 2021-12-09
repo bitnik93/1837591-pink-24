@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <header class="header">
-      <nav class="main-nav">
+      <nav class="main-nav header__container">
         <a class="user-list__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <img></img>
           <img src="#" width="74" height="23" alt="Логотип Pink">
@@ -30,9 +31,9 @@
           </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Приложение Pink</h1>
-      <section class="contest">
+      <section class="contest main__cointainer">
         <h2 class="contest__title title">Конкурс на самое безбашенное путешествие с Пинк</h2>
         <p class="contest__text text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
         <form class="contest__form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -77,9 +78,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__fieldset">
             <legend class="form__title">С каким приложением путешествовали?</legend>
-            <ul>
+            <ul class="form__list">
               <li>
                 <input class="form__data" type="radio" name="app" id="ios-app" value="iOS" checked>
                 <span class="form__mark"></span>
@@ -99,9 +100,9 @@
           </fieldset>
           <div class="form__comment">
             <legend class="form__title">Опишите свои эмоции</legend>
-            <textarea name="comment" if="comment-field" rows="10"></textarea>
+            <textarea class="form__input" name="comment" if="comment-field" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </div>
-          <button type="submit">Отправить форму</button>
+          <button class="form-button" type="submit">Отправить форму</button>
           <span class="form__required-field">* — обязательные поля</span>
         </form>
       </section>
@@ -137,12 +138,14 @@
     <div class="error">
       <h3 class="error__title">Что-то пошло не так!</h3>
       <p class="error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="error__button" type="button">Ок</button>
+      <button class="error__button form-button" type="button">Ок</button>
     </div>
     <div class="application">
       <h3 class="application__title">Ваша заявка отправлена</h3>
       <p class="application__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-    <button class="application__close" type="button">Закрыть окно</button>
+      <div class="application__container">
+        <button class="application__close form-button" type="button">Закрыть окно</button>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,39 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__wrapper-screen {
+  margin: 20px;
+  background-image: url("../../img/phone-info.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.info__title {
+  color: @base-text-color;
+  padding: 46px 20px 70px 20px;
+  background-color: @base-text-white;
+}
+
+.info-list {
+  .list-reset;
+  padding: 20px;
+  background-color: @secondary-bg-color;
+}
+
+.info-list__item {
+  list-style-type: none;
+}
+
+.info-list__title {
+  .list-reset;
+  .font-family-mixin;
+  .set-font(18px; 24px);
+}
+
+.info-list__description {
+  .list-reset;
+  .set-font(14px; 24px);
+}

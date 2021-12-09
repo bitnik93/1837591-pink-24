@@ -1,0 +1,47 @@
+.form {
+  .list-reset;
+  .font-family-mixin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__fieldset {
+  .list-reset;
+  margin: 20px;
+  border: none;
+}
+
+.form__list {
+  background-color: @secondary-bg-color;
+  .list-reset;
+  list-style-type: none;
+}
+
+.form__info {
+  .set-font(14px; 30px);
+  text-transform: uppercase;
+}
+
+.form__input {
+  .list-reset;
+  .set-font(18px; 30px);
+}
+
+.form__title {
+  .list-reset;
+  .set-font(14px; 30px);
+  color: @base-text-red;
+  text-transform: uppercase;
+}
+
+.form__label {
+  .list-reset;
+  .set-font(18px; 30px);
+}
+
+.form__comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

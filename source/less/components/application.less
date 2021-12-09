@@ -1,0 +1,24 @@
+.application {
+  .list-reset;
+  padding: 20px;
+  .font-family-mixin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.application__title {
+  color: @base-color-black;
+  .set-font(18px; 24px);
+}
+
+.application__text {
+  .set-font(14px; 24px);
+}
+
+.application__container {
+  background-color: @secondary-bg-color;
+  width: 200px;
+  height: 50px;
+}
