@@ -15,10 +15,16 @@
 
 .application__text {
   .set-font(14px; 24px);
+  text-align: center;
 }
 
 .application__container {
-  background-color: @secondary-bg-color;
-  width: 200px;
-  height: 50px;
+  @media (min-width: @tablet-width) {
+    min-width: 320px;
+    min-height: 163px;
+    background-color: @secondary-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

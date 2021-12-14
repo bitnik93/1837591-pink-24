@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -34,7 +35,7 @@
     <main class="main">
       <h1 class="visually-hidden">Приложение Pink</h1>
       <section class="intro main__cointainer">
-        <h2 class="intro__title title">Взгляните на жизнь иначе!</h2>
+        <h2 class="intro__title title">Взгляните на жизнь<br> иначе!</h2>
         <ul class="intro__links">
           <li class="intro__link">
             <a class="link" href="#">Скачать приложение</a>
@@ -47,29 +48,43 @@
           <li class="intro__app">
             <a class="intro__icon" href="https://www.microsoft.com/ru-ru/windows/windows-11">Windows</a>
           </li>
+          <li>
+            <p class="intro__desc">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+          </li>
         </ul>
-        <p class="intro__desc">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
       <section class="info">
         <div class="info__container">
           <h2 class="info__title title">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h2>
-          <ul class="info-list">
-            <li class="info-list__item">
-              <h3 class="info-list__title">Поднимает настроение</h3>
-              <p class="info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="info-list__item">
-              <h3 class="info-list__title">Меняет мир вокруг</h3>
-              <p class="info-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="info-list__item">
-              <h3 class="info-list__title">Заводит новых друзей</h3>
-              <p class="info-list__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-        </div>
-        <div class="info__wrapper-phone">
-          <img class="info__wrapper-screen" src="./img/phone-info.png">
+          <div class="info__list-wrapper">
+            <ul class="info-list">
+              <li class="info-list__item">
+                <h3 class="info-list__title">Поднимает настроение</h3>
+                <p class="info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="info-list__item">
+                <h3 class="info-list__title">Меняет мир вокруг</h3>
+                <p class="info-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="info-list__item">
+                <h3 class="info-list__title">Заводит новых друзей</h3>
+                <p class="info-list__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <div class="info__wrapper-phone">
+              <img class="info__wrapper-screen" src="./img/phone-info.png">
+              <img class="info__wrapper-screen" src="./img/phone-info.png">
+              <img class="info__wrapper-screen" src="./img/phone-info.png">
+            </div>
+          </div>
+          <div class="info__effect effect">
+            <svg class="effect__image" width="238" height="276" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m211.31 81.63 4.28-4.29c6.16-6.17 7.29-15.15 2.5-19.94-4.8-4.79-13.76-3.68-19.91 2.5l-4.3 4.3a118.27 118.27 0 0 0-59.7-25.57v-7.67h6.13c8.7 0 15.84-6.97 15.84-15.48 0-8.5-7.13-15.48-15.84-15.48H97.72c-8.71 0-15.84 6.97-15.84 15.48 0 8.52 7.13 15.48 15.84 15.48h6.12v7.67a118.94 118.94 0 0 0-69.05 34 119.31 119.31 0 0 0-18.32 144.68 119.05 119.05 0 0 0 58.38 50.19 118.84 118.84 0 0 0 76.85 3.91 118.99 118.99 0 0 0 63.18-43.99 119.28 119.28 0 0 0-3.57-145.8Zm-92.3 163.32a87.9 87.9 0 0 1-48.88-14.85A88.23 88.23 0 0 1 56.8 94.53a87.95 87.95 0 0 1 95.89-19.1 88.01 88.01 0 0 1 39.49 32.45 88.2 88.2 0 0 1-10.95 111.26 87.92 87.92 0 0 1-62.22 25.8Z" fill="#DEDEDE"/></svg>
+            <div class="effect__container">
+              <h3 class="effect__title">Эффект на 24 часа!</h3>
+              <p class="effect__description">Британские ученые провели исследования<br> и доказали, что положительный эффект<br> от использования приложения длится<br> целые сутки!</p>
+              <span class="effect__note">Узнать больше об исследовании</span>
+            </div>
+          </div>
         </div>
       </section>
       <section class="reviews">
@@ -141,21 +156,21 @@
                 <a class="contacts__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
               </dt>
             </div>
-            <div>
+            <div class="contacts__post">
               <dd class="contacts__email">Пишите:</dd>
               <dt>
                 <a class="contacts__html" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </dt>
             </div>
-            <div>
+            <div class="contacts__location">
               <dd class="contacts__guests">Приезжайте в гости:</dd>
               <dt>
                 <address class="contacts__address">Ул. Большая конюшенная 19/8</address>
               </dt>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6157114524065!2d30.324119920704568!3d59.93851863142024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638097785299!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           </dl>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6157114524065!2d30.324119920704568!3d59.93851863142024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638097785299!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
     </main>
     <footer class="footer">
@@ -183,7 +198,7 @@
       <a class="copyright-link" href="https://www.htmlacademy.ru"></a>
         <p class="copyright-link__text">Разработано</p>
         <span class="visually-hidden">HTML academy.</span>
-        <!-- <svg></svg> -->
+        <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/></svg>
       </a>
     </footer>
   </body>

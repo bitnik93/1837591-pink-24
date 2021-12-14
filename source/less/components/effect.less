@@ -1,0 +1,37 @@
+.effect {
+  .font-family-mixin;
+  .set-font;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.effect__image {
+  flex-grow: 1;
+  min-width: 238px;
+}
+
+.effect__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.effect__title {
+  .set-font(30px; 36px);
+}
+
+.effect__description {
+  .set-font(14px; 24px);
+}
+
+.effect__note {
+  .set-font(14px; 24px);
+  color: @base-text-red;
+  text-decoration: underline;
+}

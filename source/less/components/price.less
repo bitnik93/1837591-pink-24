@@ -1,19 +1,26 @@
 .price {
   margin: auto;
-  width: 276px;
+  width: 320px;
   background: @secondary-bg-color;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.price__container {
+  width: 320px;
+  overflow: auto;
+}
+
 .price__table {
   border-spacing: 0 px;
   border-collapse: collapse;
+  margin-top: 100px;
 }
 
+
 .price__title {
-  width: 276px;
+  min-width: 276px;
   height: 94px;
   color: @base-bg-color;
   background-color: @base-text-color;
@@ -30,6 +37,7 @@
 }
 
 .price__option {
+  min-width: 276px;
   .list-reset;
   .font-family-mixin;
   .set-font(14px; 30px);

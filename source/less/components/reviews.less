@@ -4,12 +4,25 @@
   width: 320px;
 }
 
+.reviews__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .reviews__author-name {
   .list-reset;
   .font-family-mixin;
   .set-font(18px; 30px);
   font-style: normal;
   font-weight: bold;
+  display: flex;
 }
 
 .reviews__text {

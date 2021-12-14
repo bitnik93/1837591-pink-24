@@ -1,4 +1,16 @@
 .site-list {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  .font-family-mixin;
+  .set-font(18px; 32px);
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.site-list__item {
+  margin-right: 80px;
 }
