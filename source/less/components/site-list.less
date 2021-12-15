@@ -20,8 +20,10 @@
 .site-list__item {
   text-align: center;
 
-  &:last-of-type {
-    margin-right: 64px;
+  @media (min-width: @desktop-width) {
+    &:last-of-type {
+      margin-right: 64px;
+    }
   }
 }
 
