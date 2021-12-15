@@ -27,8 +27,14 @@
   margin-top: 30px;
   font-weight: lighter;
 
+  @media (max-width: @mobile-width-only) {
+    margin-top: 155px;
+    margin-bottom: 356px;
+  }
+
   @media (min-width: @tablet-width) {
     .set-font(40px; 120%);
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,16 +45,22 @@
 .intro__links {
   .list-reset;
   list-style-type: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-width: 200px;
-  max-width: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .intro__link {
   min-width: 193px;
   margin-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+.intro__app {
+  grid-row: 2 / 3;
 }
 
 .intro__desc {
