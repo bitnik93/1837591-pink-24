@@ -16,8 +16,14 @@
     align-items: flex-start;
     justify-content: center;
     background-image: url("../../img/phone.png"), url("../../img/back-mobile.jpg");
-    background-position: 100% 230px, 0 0;
+    background-position: 105% 230px, 0 0;
     background-size: 370px, cover;
+    padding: 0 20px;
+
+    @media (min-width: @desktop-width) {
+      background-position: 97% 230px, 0 0;
+      padding: 0 130px;
+    }
   }
 }
 

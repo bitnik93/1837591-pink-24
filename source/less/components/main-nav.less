@@ -5,8 +5,17 @@
   min-height: 66px;
   width: 100%;
   align-items: center;
-  position: relative;
   display: flex;
+  box-sizing: border-box;
+  padding: 0 64px;
+
+  @media (min-width: @tablet-width) {
+    .padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-desktop;
+  }
 }
 
 .main-nav__list {
@@ -14,6 +23,11 @@
   list-style-type: none;
   .font-family-mixin;
   .set-font(18px; 32px);
+  order: 2;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .main-nav__toggle {
@@ -90,4 +104,3 @@
     background-color: fade(#ffffff, 30%);
   }
 }
-
