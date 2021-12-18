@@ -17,11 +17,19 @@
 .effect__image {
   flex-grow: 1;
   min-width: 238px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 374px;
+  }
 }
 
 .effect__container {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    max-width: 374px;
+  }
 }
 
 .effect__title {
@@ -31,6 +39,12 @@
 .effect__description {
   .font-family-mixin;
   .set-font(14px; 24px);
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .effect__note {

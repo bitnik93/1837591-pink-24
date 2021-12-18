@@ -10,6 +10,7 @@
 }
 
 .contacts__list {
+  .list-reset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,8 +27,11 @@
 }
 
 .contacts__location {
-  grid-column: 1 / -1;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .contacts__call {
