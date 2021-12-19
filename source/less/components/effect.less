@@ -1,0 +1,54 @@
+.effect {
+  .font-family-mixin;
+  .set-font;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    .padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    .padding-desktop;
+  }
+}
+
+.effect__image {
+  flex-grow: 1;
+  min-width: 238px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 374px;
+  }
+}
+
+.effect__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    max-width: 374px;
+  }
+}
+
+.effect__title {
+  .set-font(30px; 36px);
+}
+
+.effect__description {
+  .font-family-mixin;
+  .set-font(14px; 24px);
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.effect__note {
+  .set-font(14px; 24px);
+  color: @base-text-red;
+  text-decoration: underline;
+}

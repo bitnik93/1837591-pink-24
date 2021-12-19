@@ -13,3 +13,36 @@
 .font-family-mixin {
   font-family: "Open Sans", sans-serif;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.padding-tablet {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padding-desktop {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: @tablet-width - 1;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    max-width: @desktop-width - 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
+}

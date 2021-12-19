@@ -1,11 +1,21 @@
 .main-nav {
-  background-image: url("../../img/nav-background.png");
+  // background-image: url("../../img/nav-background.png");
+  background-color: @base-text-color;
   color: @base-text-white;
-  width: 320px;
-  display: flex;
-  justify-content: space-between;
+  min-height: 66px;
+  width: 100%;
   align-items: center;
-  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 64px;
+
+  @media (min-width: @tablet-width) {
+    .padding-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-desktop;
+  }
 }
 
 .main-nav__list {
@@ -13,8 +23,84 @@
   list-style-type: none;
   .font-family-mixin;
   .set-font(18px; 32px);
+  order: 2;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 .main-nav__toggle {
   margin-left: auto;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  z-index: 5;
+  width: 70px;
+  height: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 36px;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#ffffff, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#ffffff, 30%),
+    0 16px 0 0 fade(#ffffff, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 7px;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 30%);
+  }
 }

@@ -6,6 +6,32 @@
 
 .contacts__title {
   color: @base-text-color;
+  text-align: center;
+}
+
+.contacts__list {
+  .list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.contacts__location {
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .contacts__call {
