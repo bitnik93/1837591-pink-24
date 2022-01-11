@@ -31,9 +31,15 @@
 
 .info__title {
   color: @base-text-color;
-  padding: 46px 20px 70px 20px;
   background-color: @base-text-white;
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    &:first-child {
+      margin-top: 40px;
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .info__list-wrapper {
@@ -54,6 +60,10 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     .padding-desktop;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 110px;
   }
 }
 
@@ -81,6 +91,11 @@
 
   @media (max-width: @mobile-width-only) {
     text-align: center;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -89,14 +104,11 @@
 }
 
 .info-list__title {
-  .list-reset;
-  .font-family-mixin;
-  .set-font(18px; 24px);
+  letter-spacing: 0.7px;
 }
 
-.info-list__description {
-  .list-reset;
-  .set-font(14px; 24px);
+.info-list__item .info-list__description {
+  margin-top: 11px;
 }
 
 .info__wrapper-phone {

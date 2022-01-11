@@ -1,6 +1,6 @@
 .link {
   .list-reset;
-  .set-font(18px; 18px);
+  .set-font(20px; 18px);
   .font-family-mixin;
   display: block;
   text-align: center;
@@ -9,5 +9,16 @@
   border: 3px solid #ffffff;
   box-sizing: border-box;
   border-radius: 30px;
-  padding: 9px;
+  padding: 15px;
+  width: 280px;
+}
+
+.link:hover {
+  color: @base-text-red;
+  background-color: @base-bg-color;
+}
+
+.link:active {
+  background-color: @base-bg-color;
+  color: rgba(210, 40, 86, 0.3);
 }

@@ -45,15 +45,15 @@
 
   @media (max-width: @mobile-width-only) {
     background-image: url("../img/phone.png"), url("../img/back-mobile.jpg");
-    background-position: 50% 230px, 0 0;
-    background-size: 370px, cover;
+    background-position: 50% 176px, 0 0;
+    background-size: 320px, contain;
     background-repeat: no-repeat;
-    min-height: 733px;
+    min-height: 667px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone@2x.png"), url("../img/back-mobile@2x.jpg");
       background-position: 50% 230px, 0 0;
-      background-size: 370px, cover;
+      background-size: 370px, contain;
     }
   }
 }
@@ -61,12 +61,13 @@
 .intro__title {
   .font-family-mixin;
   .set-font;
+  text-align: center;
   margin-top: 30px;
   font-weight: lighter;
 
   @media (max-width: @mobile-width-only) {
-    margin-top: 155px;
-    margin-bottom: 356px;
+    margin-top: 91px;
+    margin-bottom: 342px;
   }
 
   @media (min-width: @tablet-width) {
@@ -88,16 +89,38 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
   }
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
 }
+
+.intro__links li:nth-child(2) {
+  margin-left: 31px;
+}
+
+.intro__links li:nth-child(3) {
+  margin-left: 6px;
+}
+
+.intro__links li:nth-child(4) {
+  margin-right: 24px;
+  margin-top: 8px;
+}
+
 
 .intro__link {
   min-width: 193px;
-  margin-bottom: 20px;
+  margin-bottom: 33px;
   grid-column: 1 / -1;
 }
 
 .intro__app {
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro__desc {
@@ -114,5 +137,9 @@
 
   @media (min-width: @desktop-width) {
     .set-font(18px; 24px);
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 31px;
   }
 }

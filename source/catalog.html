@@ -18,16 +18,16 @@
         </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a>Фотографии</a>
+              <a class="main-nav__link main-nav__link--current">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Конкурс</a>
+              <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru">HTML Academy</a>
+              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
             </li>
           </ul>
       </nav>
@@ -37,13 +37,18 @@
       <div class="main__background">
         <h2 class="main__title title"> Фотографиии пользователей</h2>
       </div>
-      <section class="catalog main__container">
+      <section class="catalog main__wrapper main__container">
         <h2 class="catalog-intro__title title visually-hidden">Отзывы пользователей</h2>
-        <p class="catalog__intro-text text">Взгляните на фотографии, которые<br> выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+        <div class="catalog-intro__paragraph-container">
+          <p class="catalog__intro-text text">Взгляните на фотографии, которые<br> выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+        </div>
         <div class="catalog__wrapper container">
           <ul class="catalog__list">
             <li class="catalog__item catalog-card">
               <div class="catalog__image-wrapper">
+                <div class="catalog__panorama-container panorama-container">
+                  <span class="panorama-container__day-image day-block">Панорама дня</span>
+                </div>
                 <picture>
                   <source media="(min-width: 1200px)"  srcset="./img/panorama-desktop.jpg 1x, ./img/panorama-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="./img/panorama-tablet.jpg 1x, ./img/panorama-tablet@2x.jpg 2x">
@@ -51,10 +56,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Анна</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(5 минут назад)</time>
-                <p class="catalog__text text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию вперископе, задавайте свои вопросы!</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Анна</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(5 минут назад)</time>
+                </div>
+                <p class="catalog__text text">Прыгать или нет? Напишите в<br> комментарии свой совет и<br> смотрите прямую трансляцию в<br> перископе, задавайте свои вопросы!</p>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -66,10 +76,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Левон</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(5 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Левон</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(5 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">356</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">356</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -81,10 +96,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Антон</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(12 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Антон</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(12 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Соседи будут рады!</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">666</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">666</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -96,10 +116,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Борис</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(20 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Борис</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(20 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Здесь могла быть ваше цитата о высоком и вечном.</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -111,10 +136,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Сергей</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(25 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Сергей</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(25 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Самай кубанская в мире!</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">4</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button  button-like" type="button">Нравится:<span class="catalog__likes">4</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -126,10 +156,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Максим</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(40 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Максим</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(40 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Где снег-то?</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">150</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">150</span></button>
+                </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog-card">
@@ -141,10 +176,15 @@
                 </picture>
               </div>
               <blockquote class="catalog__review">
-                <cite class="catalog__author-name">Надежда</cite>
-                <time class="catalog__author-time" datetime="2021-12-01">(45 часов назад)</time>
+                <div class="catalog__review-container">
+                  <cite class="catalog__author-name">Надежда</cite>
+                  <time class="catalog__author-time" datetime="2021-12-01">(45 часов назад)</time>
+                </div>
                 <p class="catalog__text text">Всем GM и взаимные лайки!</p>
-                <button class="catalog__like--button button-like" type="button">Нравится:<span class="catalog__likes">2560</span></button>
+                <div class="catalog__likes-container">
+                  <img class="catalog__heart" src="img/heart.png" srcset="img/heart@2x.png 2x">
+                  <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">2560</span></button>
+              </div>
               </blockquote>
             </li>
           </ul>
@@ -152,7 +192,7 @@
       </section>
       <section class="design">
         <h2 class="visually-hidden">Загрузить изображение в фильтр.</h2>
-        <p class="design__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="design__text text">Затмите их всех!<br> Выкладывайте все, что накопилось в<br> телефоне!</p>
         <div class="design__container">
           <div class="catalog__image-wrapper">
             <picture>
@@ -174,17 +214,17 @@
           </div>
           <div class="design__range-scale">
               <div class="design__range-bar">
-                <button class="design__range-toggle" type="button">
+                <button class="design__range-toggle design__move-toggle" type="button">
                   <span class="visually-hidden">Изменить фильтр</span>
                 </button>
               </div>
               <div class="design__range-bar">
-                <button class="design__range-toggle" type="button">
+                <button class="design__range-toggle design__move-toggle" type="button">
                   <span class="visually-hidden">Изменить фильтр</span>
                 </button>
               </div>
               <div class="design__range-bar">
-                <button class="design__range-toggle" type="button">
+                <button class="design__range-toggle design__move-toggle" type="button">
                   <span class="visually-hidden">Изменить фильтр</span>
                 </button>
               </div>

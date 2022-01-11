@@ -1,5 +1,5 @@
 .main-nav {
-  background-color: @base-text-color;
+  background-color: rgba(0, 0, 0, 0.3);
   color: @base-text-white;
   min-height: 66px;
   width: 100%;
@@ -54,6 +54,14 @@
   }
 }
 
+.main-nav__toggle:hover {
+  color: @base-text-red;
+}
+
+.main-nav__toggle:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -99,5 +107,25 @@
   &:active::before,
   &:active::after {
     background-color: fade(#ffffff, 30%);
+  }
+}
+
+.main-nav__link:hover {
+  color: @base-text-red;
+}
+
+.main-nav__link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav__link--current::before {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #ffffff;
+    content: "";
   }
 }

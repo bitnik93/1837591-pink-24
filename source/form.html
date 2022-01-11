@@ -18,16 +18,16 @@
         </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Фотографии</a>
+              <a class="main-nav__link" href="catalog.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Конкурс</a>
+              <a class="main-nav__link main-nav__link--current" href="#">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="main-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
       </nav>
@@ -39,7 +39,9 @@
       </div>
       <section class="contest main__container">
         <h2 class="contest__title title visually-hidden">Форма конкурса</h2>
-        <p class="contest__text text">Поделитесь своей историей и получите<br> шанс выиграть ценный приз — 1000<br> миль на вашу бонусную карту!</p>
+        <div class="contest__paragraph-container">
+          <p class="contest__text text">Поделитесь своей историей и получите<br> шанс выиграть ценный приз — 1000<br> миль на вашу бонусную карту!</p>
+        </div>
         <form class="contest__form form container" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__fieldset form__general-contacts">
             <ul class="form__list">
@@ -61,32 +63,34 @@
             <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="selfie-with-a-shark" value="took_a_selfie_with_a_shark" checked>
-                <span class="form__mark"></span>
-                <label class="form__label" for="selfie-with-a-shark">Сделал селфи с акулой</label>
+                <label class="form__label" for="selfie-with-a-shark" aria-label="Сделал слефи с акулой">
+                  <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="selfie-with-a-shark" value="took_a_selfie_with_a_shark" checked>
+                  <span class="form__mark"></span>
+                  <span class="form__name">Сделал селфи с акулой</span>
+                </label>
               </li>
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="Burned-on-the-beach" value="Burned_on_the_beach" checked>
+                <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="Burned-on-the-beach" value="Burned_on_the_beach" checked>
                 <span class="form__mark"></span>
                 <label class="form__label" for="Burned-on-the-beach">Обгорел на пляже</label>
               </li>
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="Chuck-Norris" value="seen_Chuck_Norris">
+                <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="Chuck-Norris" value="seen_Chuck_Norris">
                 <span class="form__mark"></span>
                 <label class="form__label" for="Chuck-Norris">Видел Чака Норриса</label>
               </li>
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="souvenirs" value="bought_souvenirs">
+                <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="souvenirs" value="bought_souvenirs">
                 <span class="form__mark"></span>
                 <label class="form__label" for="souvenirs">Накупил сувениров</label>
               </li>
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="held-the-tower" value="held_the_tower" checked>
+                <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="held-the-tower" value="held_the_tower" checked>
                 <span class="form__mark"></span>
                 <label class="form__label" for="held-the-tower">Удержал башню</label>
               </li>
               <li class="form__item">
-                <input class="form__data" type="checkbox" name="contest-achievement" id="trashed-the-hotel" value="trashed_the_hotel">
+                <input class="form__data visually-hidden" type="checkbox" name="contest-achievement" id="trashed-the-hotel" value="trashed_the_hotel">
                 <span class="form__mark"></span>
                 <label class="form__label" for="trashed-the-hotel">Разгромил отель</label>
               </li>

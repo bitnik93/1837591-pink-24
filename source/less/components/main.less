@@ -3,14 +3,13 @@
 }
 
 .main__background {
-  min-height: 545px;
+  min-height: 355px;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   min-width: 320px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -36,12 +35,35 @@
       background-repeat: no-repeat;
     }
   }
+
+  @media (max-width: @mobile-width-only) {
+    background-position: 0 -66px;
+  }
 }
 
 .main__title {
   text-align: center;
 }
 
+.main__background .main__title {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 30px;
+  }
+}
+
 .main__container {
   margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: -66px;
+  }
+}
+
+.main__reviews-container {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    margin: auto;
+    margin-top: -43px;
+  }
+  background-color: @base-bg-color;
 }
