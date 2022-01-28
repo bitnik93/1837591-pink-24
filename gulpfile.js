@@ -2,8 +2,14 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import csso from 'gulp-postcss-csso';
+import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
+import squoosh from 'gulp-libsquoosh';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
+import svgo from 'gulp-svgo';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -12,18 +18,48 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
+// HTML
+export const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest('build'))
+}
+
+// Images
+export const images = () => {
+  return gulp.src('source/img/**/.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'))
+}
+
+//SVG
+const svg = () =>
+gulp.src('source/img/*.svg')
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+
+  const sprite = () => {
+    return gulp.src('source/img/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+  }
+
 // Server
 
-const server = (done) => {
+function server(done) {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -41,5 +77,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  svg, sprite, html, styles, images, server, watcher
 );

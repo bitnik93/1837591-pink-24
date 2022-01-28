@@ -2,7 +2,203 @@
   background-color: @base-bg-color;
 }
 
+.main__background {
+  min-height: 355px;
+  background-image: url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    background-image: url("../img/back\ tablet.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: -106px;
+    min-height: 465px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back\ tablet@2x.jpg");
+      background-position: 0 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+    background-position: 0 0;
+    padding: 0 130px;
+    margin-top: -110px;
+    min-height: 394px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    background-position: 0 0;
+    margin-top: -66px;
+  }
+}
+
+.main__background-form {
+  @media (max-width: @mobile-width-only) {
+    margin: 94 auto;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    min-height: 438px;
+  }
+}
+
 .main__container {
   margin: auto;
-  margin-top: -142px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: -66px;
+  }
+}
+
+.main__container-form {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -258px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-bottom: 45px;
+  }
+}
+
+.main__reviews-container {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    margin: auto;
+    margin-top: -146px;
+  }
+
+  background-color: @base-bg-color;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .padding-tablet;
+    margin-top: -43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.main__price-container {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -18px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/grey-background-desktop.png");
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.main__contacts-container {
+  margin-top: 59px;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 33px;
+  }
+}
+
+//Catalog
+
+.main__wrapper {
+  margin: auto;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: -258px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: -163px;
+  }
+}
+
+
+.main__title {
+  text-align: center;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    max-width: 375px;
+  }
+}
+
+.main__background .main__title {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 95px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin: 0 auto;
+    margin-top: 179px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 568px;
+    margin-top: 171px;
+  }
+}
+
+.main__background-form .main__title {
+  margin: 0 auto;
+  max-width: 750px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 97px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 176px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 170px;
+  }
+}
+
+.main__design-container {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    min-height: 704px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .padding-desktop;
+  }
+}
+
+.main__background-form .main__form-title {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .set-font(50px; 68px);
+    min-width: 480px;
+  }
+}
+
+.main__form-title br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

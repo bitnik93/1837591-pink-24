@@ -5,4 +5,14 @@
   color: @base-text-white;
   .font-family-mixin;
   .set-font();
+  line-height: 32px;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .set-font(40px, 54px);
+    letter-spacing: 0.3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font (50px; 68px);
+  }
 }

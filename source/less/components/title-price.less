@@ -1,0 +1,38 @@
+.title-price {
+  .font-family-mixin;
+  .set-font(16px; 30px);
+  font-weight: bold;
+  color: @base-bg-color;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 12px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &:first-child {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: table-cell;
+      background-color: transparent;
+      border: none;
+    }
+
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      display: table-cell;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

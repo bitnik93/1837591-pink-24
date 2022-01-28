@@ -1,0 +1,15 @@
+.copyright-link {
+  color: @base-text-color;
+  .font-family-mixin;
+  .set-font(14px, 18px);
+}
+
+.copyright-link__text {
+  margin-right: 14px;
+  letter-spacing: 0.4px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 11px;
+    .set-font(18px, 18px);
+  }
+}

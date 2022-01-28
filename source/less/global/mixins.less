@@ -22,9 +22,22 @@
   clip: rect(0 0 0 0);
 }
 
+.padding-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .padding-tablet {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .padding-desktop {
@@ -45,4 +58,8 @@
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
   }
+}
+
+body .display-on {
+  display: flex;
 }
