@@ -6,13 +6,16 @@
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    min-height: 127px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0 20px;
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -20,10 +23,113 @@
   .list-reset;
   list-style-type: none;
   display: flex;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 36px;
+    min-width: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 6px;
+    margin-right: 19px;
+    min-width: 178px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 173px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.copyright-link__text {
+.footer__ring {
+  &:hover {
+    stroke: @base-text-color;
+    opacity: 1;
+  }
+}
+
+.footer__icon {
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.footer__icon-logo {
+
+  color: @base-text-red;
+
+  &:hover {
+    color: @base-text-color;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__links-containter {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 27px;
+  }
+}
+
+.footer__logo {
+  margin-top: 20px;
+  color: @base-text-red;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: -17px;
+  }
+
+  &:active {
+    color: @base-text-color;
+    opacity: 0.3;
+  }
+}
+
+.footer__copyright {
+  margin-top: 29px;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.footer__logo-pink-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.footer__logo-pink-desktop {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.footer__logo-pink-condition {
   color: @base-text-color;
-  .font-family-mixin;
-  .set-font(14px, 18px);
+
+  &:hover {
+    color: @base-text-red;
+  }
 }

@@ -3,14 +3,21 @@
   .set-font;
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     display: flex;
     .padding-tablet;
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 412px;
     display: flex;
     .padding-desktop;
+  }
+}
+
+.effect--desktop {
+  @media (min-width: @desktop-width) {
+    background-color: @secondary-bg-color;
   }
 }
 
@@ -18,8 +25,14 @@
   flex-grow: 1;
   min-width: 238px;
 
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 53px;
+    margin-right: 70px;
+  }
+
   @media (min-width: @desktop-width) {
-    max-width: 374px;
+    max-width: 298px;
+    height: 345px;
   }
 }
 
@@ -27,21 +40,56 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 56px;
+    margin-right: 12px;
+    letter-spacing: 0.5px;
+  }
+
   @media (min-width: @desktop-width) {
-    max-width: 374px;
+    max-width: 550px;
+    margin-left: 72px;
   }
 }
 
 .effect__title {
   .set-font(30px; 36px);
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .list-reset;
+    margin-top: 41px;
+    letter-spacing: 0.6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .list-reset;
+    margin-top: 93px;
+    margin-bottom: 24px;
+  }
+}
+
+.effect__title br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .effect__description {
   .font-family-mixin;
   .set-font(14px; 24px);
 
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .list-reset;
+    margin-top: 10px;
+  }
+
   @media (min-width: @desktop-width) {
-    br {
+    .list-reset;
+    .set-font(19px; 30px);
+    min-width: 55px;
+    margin-bottom: 28px;
+
+    & br {
       display: none;
     }
   }
@@ -51,4 +99,20 @@
   .set-font(14px; 24px);
   color: @base-text-red;
   text-decoration: underline;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(19px; 30px);
+  }
+}
+
+.effect__description .effect__break {
+  display: block;
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: none;
+  }
 }

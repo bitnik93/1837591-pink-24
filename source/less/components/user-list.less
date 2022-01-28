@@ -1,4 +1,47 @@
 .user-list__logo {
   order: 1;
   margin-right: auto;
+
+  &:hover {
+    color: @base-text-red;
+  }
+
+  &:active {
+    color: @base-bg-color;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -12px;
+  }
+}
+
+.user-list__mobile-pink {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-list__tablet-pink {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-list__desktop-pink {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: none;
+  }
 }

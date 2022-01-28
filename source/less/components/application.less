@@ -1,29 +1,112 @@
 .application {
   .list-reset;
   .font-family-mixin;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .application__title {
+  margin: 0;
   color: @base-color-black;
-  .set-font(18px; 24px);
+  .set-font(19px; 24px);
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 11px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .set-font(31px; 40px);
+    max-width: 205px;
+    text-align: center;
+    margin-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(32px; 40px);
+    text-align: center;
+    margin-top: 42px;
+  }
 }
 
 .application__text {
+  margin: 0;
   .set-font(14px; 24px);
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 24px;
+    margin-bottom: 34px;
+    max-width: 284px;
+    letter-spacing: 0.4px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .set-font(18px; 24px);
+    margin-top: 22px;
+    margin-bottom: 28px;
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(19px; 24px);
+    margin-top: 20px;
+    max-width: 400px;
+    margin-bottom: 39px;
+  }
 }
 
 .application__container {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     min-width: 320px;
-    min-height: 163px;
+    min-height: 165px;
     background-color: @secondary-bg-color;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 162px;
+    width: 100%;
+    background-color: @secondary-bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 162px;
+    width: 100%;
+    background-color: @secondary-bg-color;
+  }
+}
+
+.application__text br {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.application__container .application__close {
+  min-width: 459px;
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 278px;
   }
 }

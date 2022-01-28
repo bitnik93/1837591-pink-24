@@ -16,10 +16,11 @@
     background-repeat: no-repeat;
     padding: 0 130px;
     min-height: 853px;
+    margin-top: -110px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone-desktop@2x.png"), url("../img/back-desktop@2x.jpg");
-      background-position: 100% 208px, 0 0;
+      background-position: 97% 208px, 0 0;
       background-size: 1050px, cover;
       background-repeat: no-repeat;
     }
@@ -30,20 +31,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: 545px;
     background-image: url("../img/phone-tablet.png"), url("../img/back\ tablet.jpg");
-    background-position: 105% 230px, 0 0;
+    background-position: 105% 183px, 0 -1px;
     background-repeat: no-repeat;
-    background-size: 370px, cover;
+    background-size: 660px, cover;
     padding: 0 20px;
+    margin-top: -107px;
+    min-height: 729px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone-tablet@2x.png"), url("../img/back\ tablet@2x.jpg");
-      background-position: 100% 200px, 0 0;
+      background-position: 100% 183px, 0 0;
     }
   }
 
-  @media (max-width: @mobile-width-only) {
+  @media (max-width: 505px) {
     background-image: url("../img/phone.png"), url("../img/back-mobile.jpg");
     background-position: 50% 176px, 0 0;
     background-size: 320px, contain;
@@ -52,8 +54,22 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/phone@2x.png"), url("../img/back-mobile@2x.jpg");
-      background-position: 50% 230px, 0 0;
-      background-size: 370px, contain;
+      background-position: 50% 176px, 0 0;
+      background-size: 320px, contain;
+    }
+  }
+
+  @media (min-width: 506px) and (max-width: @mobile-width-only) {
+    background-image: url("../img/phone.png"), url("../img/back-mobile.jpg");
+    background-position: 50% 176px, 0 0;
+    background-size: 320px, cover;
+    background-repeat: no-repeat;
+    min-height: 667px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/phone@2x.png"), url("../img/back-mobile@2x.jpg");
+      background-position: 50% 176px, 0 0;
+      background-size: 320px, cover;
     }
   }
 }
@@ -70,13 +86,17 @@
     margin-bottom: 342px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     .set-font(40px; 120%);
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    margin-top: 87px;
+    margin-left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    .set-font(50px; auto);
+    .set-font(50px; 139%);
+    margin-top: 84px;
+    margin-left: 30px;
   }
 }
 
@@ -86,7 +106,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     margin-bottom: 40px;
   }
 
@@ -96,16 +120,31 @@
 }
 
 .intro__links li:nth-child(2) {
-  margin-left: 31px;
+  @media (max-width: @mobile-width-only) {
+    margin-left: 30px;
+  }
+  margin-left: 37px;
 }
 
 .intro__links li:nth-child(3) {
-  margin-left: 6px;
+  margin-left: -1px;
 }
 
 .intro__links li:nth-child(4) {
-  margin-right: 24px;
-  margin-top: 8px;
+  @media (max-width: @mobile-width-only) {
+    margin-right: 27px;
+    margin-top: 7px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-right: 42px;
+    margin-top: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+    margin-top: 5px;
+  }
 }
 
 
@@ -113,6 +152,14 @@
   min-width: 193px;
   margin-bottom: 33px;
   grid-column: 1 / -1;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-bottom: 49px;
+  }
 }
 
 .intro__app {
@@ -131,12 +178,17 @@
   font-weight: normal;
   color: @base-text-white;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     .set-font(18px; 24px);
+    margin-top: -11px;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
     .set-font(18px; 24px);
+    margin-top: 50px;
+    letter-spacing: -0.1px;
+    margin-left: 4px;
   }
 
   @media (max-width: @mobile-width-only) {

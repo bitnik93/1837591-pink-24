@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     position: static;
-    max-width: 760px;
+    max-width: 621px;
   }
 }
 
@@ -23,6 +23,24 @@
   display: block;
   background-color: @base-text-color;
   box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  @media (max-width: @mobile-width-only) {
+    .set-font(18px; 32px);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    .set-font(18px; 32px);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 64px;
+  }
 
   @media (min-width: @desktop-width) {
     background-color: transparent;
