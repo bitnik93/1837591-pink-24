@@ -95,11 +95,13 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 317px 292px 211px;
-    grid-row-gap: 60px;
+    grid-row-gap: 52px;
   }
 }
 
 .form__item-travel {
+  margin-bottom: 7px;
+
   @media (min-width: @desktop-width) {
     &:nth-child(1) {
       order: 1;
@@ -200,6 +202,7 @@
 .form__contacts-info .form__list {
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
   }
@@ -340,6 +343,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-bottom: 40px;
   }
 }
 
@@ -392,7 +396,7 @@
 
 .form__app-item {
   &:not(:last-child) {
-    margin-bottom: 51px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -473,6 +477,10 @@
 
   &:hover {
     border: 2px solid #283645;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #283645;
   }
 
   &:active {
@@ -585,15 +593,15 @@
 }
 
 .form__label-radio {
-  padding-left: 49px;
+  padding-left: 70px;
   .set-font(19px; 23px);
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
-    padding-left: 40px;
+    padding-left: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 40px;
+    padding-left: 61px;
   }
 }
 
@@ -698,6 +706,10 @@ form .form__form-button {
 }
 
 .form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: @mobile-width-only) {
     display: none;
   }

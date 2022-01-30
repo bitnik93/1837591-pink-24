@@ -8,6 +8,7 @@
 .contacts__wrapper {
   @media (min-width: @desktop-width) {
     width: 100%;
+    min-height: 287px;
   }
 }
 
@@ -38,6 +39,7 @@
 
   @media (max-width: @mobile-width-only) {
     margin-top: 30px;
+    min-height: 245px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -48,12 +50,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 880px;
+    max-width: 880px;
     margin: 0 auto;
     margin-top: 41px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 24px 81px;
   }
 }
 
@@ -82,10 +84,12 @@
     z-index: 1;
     width: 100%;
     background-repeat: no-repeat;
+    top: 246px;
   }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/triangle-white-footer-tablet@2x.png");
+    top: 246px;
   }
 
   @media (min-width: @desktop-width) {
@@ -111,7 +115,6 @@
 
   @media (min-width: @desktop-width) {
     order: 1;
-    margin-left: 20px;
   }
 }
 
@@ -122,9 +125,9 @@
   .set-font(18px, 25px);
 
   @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
     .set-font(19px, 25px);
-    margin-left: 57px;
-    margin-bottom: 20px;
+    margin-left: 76px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -134,8 +137,21 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    margin-left: 61px;
+    margin-left: 5px;
     letter-spacing: 0.8px;
+  }
+}
+
+.contacts__call-container {
+  @media (min-width: @desktop-width) {
+    grid-row: 2 / 3;
+    margin-left: 18px;
+    margin-top: -9px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 32px;
+    margin-top: 1px;
   }
 }
 
@@ -176,14 +192,15 @@
   .font-family-mixin;
   .set-font(24px, 33px);
   color: @base-text-red;
+  max-width: 250px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: -39px;
+  }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     margin-left: 10px;
     letter-spacing: -0.2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: -2px;
   }
 
   &:hover {
@@ -201,10 +218,12 @@
   color: @base-text-color;
   .font-family-mixin;
   .set-font(18px, 25px);
+  max-width: 250px;
 
   @media (max-width: @mobile-width-only) {
-    margin-left: 78px;
+    margin-left: 8px;
     letter-spacing: 1.5px;
+    margin-top: 17px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -213,9 +232,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 20px;
-    margin-left: 76px;
     .set-font(20px, 25px);
+    margin-left: 132px;
+  }
+}
+
+.contacts__email-container {
+  @media (min-width: @desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin-left: 52px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: 3px;
   }
 }
 
@@ -243,10 +273,12 @@
   color: @base-text-color;
   .font-family-mixin;
   .set-font(18px, 25px);
+  max-width: 250px;
 
   @media (max-width: @mobile-width-only) {
     letter-spacing: 1px;
     margin-left: 6px;
+    margin-top: 20px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -256,20 +288,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 18px;
-    margin-bottom: 20px;
     .set-font(20px, 25px);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-left: 48px;
   }
 }
 
 .contacts__adress {
+  max-width: 250px;
+
   @media (max-width: @mobile-width-only) {
     margin-left: 2px;
     letter-spacing: 0.6px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 14px;
     letter-spacing: 0.8px;
   }
 
@@ -283,7 +317,36 @@
   }
 }
 
-.contacts--condition {
+.contacts__adress-container {
+  @media (min-width: @desktop-width) {
+    margin-top: 24px;
+    margin-left: 21px;
+  }
+}
+
+.contacts__number--condition {
+  &:hover {
+    color: @base-text-color;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
+}
+
+.contacts__html--condition {
+  &:hover {
+    color: @base-text-color;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
+}
+
+.contacts__adress--condition {
   &:hover {
     color: @base-text-color;
     text-decoration: underline;
