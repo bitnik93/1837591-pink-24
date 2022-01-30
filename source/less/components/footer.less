@@ -13,7 +13,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -46,14 +46,14 @@
   }
 }
 
-.footer__ring {
-  &:hover {
-    stroke: @base-text-color;
-    opacity: 1;
-  }
-}
-
 .footer__icon {
+  height: 55px;
+
+  &:hover {
+    box-shadow: 0 0 0 3px #283645;
+    border-radius: 50px;
+  }
+
   &:active {
     opacity: 0.1;
   }
