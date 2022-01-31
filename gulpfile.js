@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
-import csso from 'gulp-postcss-csso';
+import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import squoosh from 'gulp-libsquoosh';
@@ -10,6 +10,13 @@ import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
+import del from 'del';
+
+// Clean
+
+const clean = () => {
+  return del('build');
+};
 
 // Styles
 
@@ -35,9 +42,21 @@ export const html = () => {
 
 // Images
 export const images = () => {
-  return gulp.src('source/img/**/.{jpg,png}')
+  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon.svg'])
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
+}
+
+// fonts
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
 }
 
 //SVG
@@ -73,9 +92,10 @@ function server(done) {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html));
 }
 
 
 export default gulp.series(
-  svg, sprite, html, styles, images, server, watcher
+  clean, copy, svg, sprite, html, styles, images, server, watcher
 );

@@ -54,6 +54,10 @@
 .info-list__item .info-list__description {
   margin-top: 11px;
 
+  @media (max-width: @mobile-width-only) {
+    max-width: 274px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-top: 23px;
   }
@@ -70,7 +74,7 @@
 }
 
 .info-list__description .info-list__break {
-  display: none;
+  content: "";
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     display: block;

@@ -47,6 +47,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 34px;
     min-width: 659px;
+    justify-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -65,6 +66,7 @@
   top: 321px;
   left: 0;
   background-size: contain;
+  z-index: 1;
 
   @media (max-width: @mobile-width-only) {
     background-image: url("../../img/triangle-white-footer.png");
@@ -84,12 +86,12 @@
     z-index: 1;
     width: 100%;
     background-repeat: no-repeat;
-    top: 246px;
-  }
+    top: 319px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/triangle-white-footer-tablet@2x.png");
-    top: 246px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/triangle-white-footer-tablet@2x.png");
+      top: 319px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -99,10 +101,10 @@
     z-index: 1;
     width: 100%;
     background-repeat: no-repeat;
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/triangle-white-footer-desktop@2x.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/triangle-white-footer-desktop@2x.png");
+    }
   }
 }
 
@@ -147,6 +149,11 @@
     grid-row: 2 / 3;
     margin-left: 18px;
     margin-top: -9px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-left: -4px;
+    margin-top: 1px;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -229,6 +236,8 @@
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     margin-left: -6px;
     letter-spacing: 1.4px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
 
   @media (min-width: @desktop-width) {
@@ -242,6 +251,11 @@
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     margin-left: 52px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin-left: -1px;
+    margin-top: 2px;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -274,6 +288,7 @@
   .font-family-mixin;
   .set-font(18px, 25px);
   max-width: 250px;
+  z-index: 10;
 
   @media (max-width: @mobile-width-only) {
     letter-spacing: 1px;
@@ -285,6 +300,8 @@
     margin-left: 2px;
     margin-bottom: 4px;
     .set-font(20px, 25px);
+    grid-column: 1 / 3;
+    margin-top: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -297,6 +314,7 @@
 
 .contacts__adress {
   max-width: 250px;
+
 
   @media (max-width: @mobile-width-only) {
     margin-left: 2px;
@@ -318,9 +336,20 @@
 }
 
 .contacts__adress-container {
+  z-index: 10;
+
   @media (min-width: @desktop-width) {
     margin-top: 24px;
     margin-left: 21px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    grid-column: 1 / 3;
+    margin-left: -2px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    margin-left: -3px;
   }
 }
 

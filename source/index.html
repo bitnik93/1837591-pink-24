@@ -64,15 +64,15 @@
             <ul class="info-list info__wrapper">
               <li class="info-list__item">
                 <h3 class="info-list__title title-list">Поднимает настроение</h3>
-                <p class="description-list info-list__description">Приложение позволит вам победить<br> осеннюю хандру и депрессию<br> буквально в несколько кликов!</p>
+                <p class="description-list info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="info-list__item">
                 <h3 class="info-list__title title-list">Меняет мир<br class="info-list__br"> вокруг</h3>
-                <p class="info-list__description description-list">Сделайте снимок и украсьте его<br> смайликом или текстовой подписью,<br> чтобы<br class="info-list__break"> усилить эффект</p>
+                <p class="info-list__description description-list">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br class="info-list__break"> &nbsp;усилить эффект</p>
               </li>
               <li class="info-list__item">
                 <h3 class="info-list__title title-list">Заводит<br class="info-list__br"> новых друзей</h3>
-                <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и<br> заводите новых</p>
+                <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и<br> &nbsp;заводите новых</p>
               </li>
             </ul>
             <div class="info__wrapper-phone">
@@ -92,11 +92,11 @@
             </div>
           </div>
           <div class="info__effect effect effect--desktop">
-            <svg class="effect__image" width="238" height="276"><use href="./img/sprite.svg#effect-image"></use>
+            <svg class="effect__image" width="238" height="276" viewBox="0 0 238 276"><use href="./img/sprite.svg#effect-image"></use>
               </svg>
               <div class="effect__container">
                 <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
-                <p class="effect__description">Британские ученые провели исследования<br> и доказали,<br class="effect__break"> что положительный эффект<br class="effect__break-2"> от использования приложения длится<br> целые сутки!</p>
+                <p class="effect__description">Британские ученые провели исследования<br> &nbsp;и доказали,<br class="effect__break"> &nbsp;что положительный эффект<br class="effect__break-2"> &nbsp;от использования приложения длится<br> &nbsp;целые сутки!</p>
                 <a class="effect__note" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
@@ -110,7 +110,7 @@
               <svg class="reviews__quote" width="79" height="63"><use href="./img/sprite.svg#quotes"></use>
                 </svg>
               <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир<br> и позволило по-новому взглянуть на<br> привычные серые вещи! А еще я<br> познакомился со своей будущей женой<br> в комментариях к выложенной<br> фотографии!»</p>
+              <p class="reviews__text">«Это приложение перевернуло мой мир<br> &nbsp;и позволило по-новому взглянуть на &nbsp;привычные серые вещи! А еще я<br> &nbsp;познакомился со своей будущей женой<br> &nbsp;в комментариях к выложенной<br> &nbsp;фотографии!»</p>
               <p class="reviews__author-details">25 лет, водитель трамвая</p>
             </blockquote>
             <button class="reviews__prev" type="button"><svg class="reviews__button-prev" width="22" height="41" viewBox="0 0 22 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -272,7 +272,25 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      navMain.classList.remove('main-nav--no-js');
+      navMain.classList.add('main-nav--closed');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+
+      navToggle.addEventListener('click', () => {
+        if (navMain.classList.contains('main-nav--opened')) {
+          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('main-nav--closed');
+
+        } else {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+  }
+});
+
+    </script>
   </body>
 </html>
 
