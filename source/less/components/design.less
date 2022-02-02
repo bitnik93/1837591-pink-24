@@ -130,12 +130,14 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-content: space-between;
+    min-height: 400px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     max-width: 430px;
+    min-height: 397px;
     justify-content: space-around;
     align-content: space-between;
   }
@@ -423,6 +425,10 @@
   border-radius: 15px;
   cursor: pointer;
   outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 1px #d22856;
+  }
 
   &:active {
     background: @base-text-red;

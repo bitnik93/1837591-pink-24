@@ -42,16 +42,19 @@
           <li class="intro__link">
             <a class="link" href="#">Скачать приложение</a>
           <li class="intro__app">
-            <svg class="intro__app-icon" width="47" height="56"><use href="./img/sprite.svg#apple-logo"></use></svg>
-            <a class="intro__icon visually-hidden" href="https://www.apple.com/ru/app-store/">iPhone</a>
+            <a class="intro__icon" href="https://www.apple.com/ru/app-store/" aria-label="Скачать Apple версию">
+              <svg class="intro__app-icon" width="47" height="56"><use href="./img/sprite.svg#apple-logo"></use></svg>
+            </a>
           </li>
           <li class="intro__app">
-            <svg class="intro__app-icon" width="43" height="47"><use href="./img/sprite.svg#android-logo"></use></svg>
-            <a class="intro__icon visually-hidden" href="https://www.android.com/">Android</a>
+            <a class="intro__icon" href="https://www.android.com/" aria-label="Скачать Android версию">
+              <svg class="intro__app-icon" width="43" height="47"><use href="./img/sprite.svg#android-logo"></use></svg>
+            </a>
           </li>
           <li class="intro__app">
-            <svg class="intro__app-icon" width="44" height="41"><use href="./img/sprite.svg#microsoft-logo"></use></svg>
-            <a class="intro__icon visually-hidden" href="https://www.microsoft.com/ru-ru/windows/windows-11">Windows</a>
+            <a class="intro__icon" href="https://www.microsoft.com/ru-ru/windows/windows-11" aria-label="Скачать Windows версию">
+              <svg class="intro__app-icon" width="44" height="41"><use href="./img/sprite.svg#microsoft-logo"></use></svg>
+            </a>
           </li>
         </ul>
         <p class="intro__desc">Доступно для iPhone, iPad, Android,<br> &nbsp;Windows Phone, OS X, Windows 8</p>
@@ -60,35 +63,37 @@
         <div class="info__container container">
           <h2 class="info__title title">Устали от серости мегаполиса?</h2>
           <h2 class="info__title title">Нам есть, что вам предложить!</h2>
-          <div class="info__list-wrapper">
-            <ul class="info-list info__wrapper">
-              <li class="info-list__item">
-                <h3 class="info-list__title title-list">Поднимает настроение</h3>
-                <p class="description-list info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              </li>
-              <li class="info-list__item">
-                <h3 class="info-list__title title-list">Меняет мир<br class="info-list__br"> вокруг</h3>
-                <p class="info-list__description description-list">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br class="info-list__break"> &nbsp;усилить эффект</p>
-              </li>
-              <li class="info-list__item">
-                <h3 class="info-list__title title-list">Заводит<br class="info-list__br"> новых друзей</h3>
-                <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и<br> &nbsp;заводите новых</p>
-              </li>
-            </ul>
-            <div class="info__wrapper-phone">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="./img/phone-info-desktop.png 1x, ./img/phone-info-desktop@2x.png 2x">
-                <source media="(min-width: 660px)" srcset="./img/phone-info-tablet.png 1x, ./img/phone-info-tablet@2x.png 2x">
-                <img class="info__img-wrapper" src="./img/phone-info.png" alt="Поднимает настроение" srcset="./img/phone-info@2x.png 2x">
-              </picture>
-              <picture>
-                <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop2.png 1x, ./img/phone-info-desktop2@2x.png 2x">
-                <img class="info__wrapper-screen info__screen-wrapper" alt="Меняет мир вокруг" src="./img/phone-info-desktop2.png" srcset="./img/phone-info-desktop2@2x.png 2x">
+          <div class="info__list-container">
+            <div class="info__list-wrapper">
+              <ul class="info-list info__wrapper">
+                <li class="info-list__item">
+                  <h3 class="info-list__title title-list">Поднимает настроение</h3>
+                  <p class="description-list info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </li>
+                <li class="info-list__item">
+                  <h3 class="info-list__title title-list">Меняет мир<br class="info-list__br"> вокруг</h3>
+                  <p class="info-list__description description-list">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br class="info-list__break"> &nbsp;усилить эффект</p>
+                </li>
+                <li class="info-list__item">
+                  <h3 class="info-list__title title-list">Заводит<br class="info-list__br"> новых друзей</h3>
+                  <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и<br> &nbsp;заводите новых</p>
+                </li>
+              </ul>
+              <div class="info__wrapper-phone">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/phone-info-desktop.png 1x, ./img/phone-info-desktop@2x.png 2x">
+                  <source media="(min-width: 660px)" srcset="./img/phone-info-tablet.png 1x, ./img/phone-info-tablet@2x.png 2x">
+                  <img class="info__img-wrapper" src="./img/phone-info.png" alt="Поднимает настроение" srcset="./img/phone-info@2x.png 2x">
                 </picture>
                 <picture>
-                <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop3.png 1x, ./img/phone-info-desktop3@2x.png 2x">
-                <img class="info__wrapper-screen" src="./img/phone-info-desktop3.png" alt="Заводит новых друзей" srcset="./img/phone-info-desktop3@2x.png 2x">
-              </picture>
+                  <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop2.png 1x, ./img/phone-info-desktop2@2x.png 2x">
+                  <img class="info__wrapper-screen info__screen-wrapper" alt="Меняет мир вокруг" src="./img/phone-info-desktop2.png" srcset="./img/phone-info-desktop2@2x.png 2x">
+                  </picture>
+                  <picture>
+                  <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop3.png 1x, ./img/phone-info-desktop3@2x.png 2x">
+                  <img class="info__wrapper-screen" src="./img/phone-info-desktop3.png" alt="Заводит новых друзей" srcset="./img/phone-info-desktop3@2x.png 2x">
+                </picture>
+              </div>
             </div>
           </div>
           <div class="info__effect effect effect--desktop">

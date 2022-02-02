@@ -62,7 +62,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__travel">
-            <legend class="form__title form__title-contacts"><span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Ваши безбашенные достижения в путешествии<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></legend>
+            <legend class="form__title form__title-contacts"><span class="form__title-container">Ваши безбашенные достижения в путешествии</span></legend>
             <ul class="form__list">
               <li class="form__item form__item-travel">
                 <label class="form__label form__name-font" for="selfie-with-a-shark" aria-label="Сделал слефи с акулой">
@@ -109,26 +109,22 @@
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__contacts-info">
-            <legend class="form__title form__title-contacts-info">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Контактная информация&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</legend>
+            <legend class="form__title form__title-contacts-info"><span class="form__title-container">Контактная информация</span></legend>
             <ul class="form__list">
               <li class="form__contacts-item">
                 <label class="form__info" for="phone-number-field">Номер телефона</label>
-                <input class="form__input" type="text" name="number" id="phone-number-field" placeholder="Номер, пожалуйста">
-              <button class="form__button" aria-label="Номер телефона."><svg width="20" height="19"><use href="./img/sprite.svg#phone-icon"></use>
-                </svg>
-                </button>
+                <input class="form__input" type="tel" name="number" id="phone-number-field" placeholder="Номер, пожалуйста">
+                <div class="form__button form__contacts-background"><svg width="20" height="19"><use href="./img/sprite.svg#phone-icon"></use></svg></div>
               </li>
               <li class="form__contacts-item">
                 <label class="form__info" for="email-contact-field">Адрес почты</label>
-                <input class="form__input" type="text" name="email" id="email-contact-field" placeholder="Введите почту*">
-                <button class="form__button" aria-label="Адрес почты."><svg width="18" height="13" ><use href="./img/sprite.svg#mail-icon"></use>
-                  </svg>
-                  </button>
+                <input class="form__input" type="email" name="email" id="email-contact-field" placeholder="Введите почту*">
+                <div class="form__button form__contacts-background"><svg width="18" height="13" ><use href="./img/sprite.svg#mail-icon"></use></svg></div>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__apps">
-            <legend class="form__title form__title-app"><span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>С каким приложением путешествовали?<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></legend>
+            <legend class="form__title form__title-app"><span class="form__title-container">С каким приложением путешествовали?</span></legend>
             <ul class="form__list">
               <li class="form__item form__app-item">
                 <label class="form__label form__label-radio form__name-font" for="ios-app">
@@ -154,7 +150,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__comment">
-            <legend class="form__title form__title-comment"><span class="space"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Опишите свои эмоции<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></legend>
+            <legend class="form__title form__title-comment"><span class="form__title-container">Опишите свои эмоции</span></legend>
             <textarea class="form__input form__text" name="comment" id="comment-field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__button-wrapper">
