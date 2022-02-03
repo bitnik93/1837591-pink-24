@@ -47,20 +47,20 @@
         <div class="catalog__wrapper container">
           <ul class="catalog__list">
             <li class="catalog__item catalog-card">
-              <a href="#">
-                <div class="catalog__image-wrapper">
-                  <div class="catalog__image-container">
-                    <div class="catalog__panorama-container panorama-container">
-                      <span class="panorama-container__day-image day-block">Панорама дня</span>
-                    </div>
+              <div class="catalog__image-wrapper">
+                <div class="catalog__image-container">
+                  <div class="catalog__panorama-container panorama-container">
+                    <span class="panorama-container__day-image day-block">Панорама дня</span>
+                  </div>
+                  <a href="#">
                     <picture>
                       <source media="(min-width: 1200px)"  srcset="./img/panorama-desktop.jpg 1x, ./img/panorama-desktop@2x.jpg 2x">
                       <source media="(min-width: 660px)" srcset="./img/panorama-tablet.jpg 1x, ./img/panorama-tablet@2x.jpg 2x">
                       <img class="catalog__panorama" alt="Панорама мостика над горой." src="img/panorama-mobile.jpg" srcset="./img/panorama-mobile@2x.jpg 2x">
                     </picture>
-                  </div>
+                  </a>
                 </div>
-              </a>
+              </div>
               <blockquote class="catalog__panorama-review catalog__review-panorama">
                 <div class="catalog__panorama-blockquote-wrapper">
                   <div class="catalog__panorama-review-container">
@@ -70,7 +70,7 @@
                   <p class="catalog__panorama-text text">Прыгать или нет? Напишите в<br> &nbsp;комментарии свой совет и<br> &nbsp;смотрите прямую трансляцию в<br> &nbsp;перископе, задавайте свои вопросы!</p>
                   <div class="catalog__panorama-likes-container">
                     <button class="catalog__panorama-likes-button">
-                      <img class="catalog__panorama-heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                      <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                     </button>
                     <button class="catalog__panorama-button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
                   </div>
@@ -78,15 +78,15 @@
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-                    <img src="img/photo-1-mobile.jpg" alt="снимок автомобиля." srcset="./img/photo-1-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                      <img src="img/photo-1-mobile.jpg" alt="снимок автомобиля." srcset="./img/photo-1-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Левон</cite>
@@ -95,22 +95,22 @@
                 <p class="catalog__text text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">356</span></button>
                 </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-                    <img src="img/photo-2-mobile.jpg" alt="Барабанная установка." srcset="./img/photo-2-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+                      <img src="img/photo-2-mobile.jpg" alt="Барабанная установка." srcset="./img/photo-2-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Антон</cite>
@@ -119,22 +119,22 @@
                 <p class="catalog__text text">Соседи будут рады!</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">666</span></button>
                 </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-                    <img src="img/photo-3-mobile.jpg" alt="отражение неба от дома" srcset="./img/photo-3-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                      <img src="img/photo-3-mobile.jpg" alt="отражение неба от дома" srcset="./img/photo-3-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Борис</cite>
@@ -143,22 +143,22 @@
                 <p class="catalog__text text">Здесь могла быть ваше цитата о высоком и вечном.</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">215</span></button>
                 </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
-                    <img src="img/photo-4-mobile.jpg" alt="Кубанская Бахча" srcset="./img/photo-4-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                      <img src="img/photo-4-mobile.jpg" alt="Кубанская Бахча" srcset="./img/photo-4-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Сергей</cite>
@@ -167,22 +167,22 @@
                 <p class="catalog__text text">Самай кубанская в мире!</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button  button-like" type="button">Нравится:<span class="catalog__likes">4</span></button>
                 </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
-                    <img src="img/photo-5-mobile.jpg" alt="человек, сидящий на склоне горы." srcset="./img/photo-5-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
+                      <img src="img/photo-5-mobile.jpg" alt="человек, сидящий на склоне горы." srcset="./img/photo-5-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Максим</cite>
@@ -191,22 +191,22 @@
                 <p class="catalog__text text">Где снег-то?</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">150</span></button>
                 </div>
               </blockquote>
             </li>
             <li class="catalog__item catalog__item--wrp catalog-card">
-              <a href="#">
                 <div class="catalog__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1200px)"  srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
-                    <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
-                    <img class="catalog__photos" alt="крыло самолета в полете" src="img/photo-6-mobile.jpg" srcset="./img/photo-6-mobile@2x.jpg 2x">
-                  </picture>
+                  <a href="#">
+                    <picture>
+                      <source media="(min-width: 1200px)"  srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
+                      <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
+                      <img class="catalog__photos" alt="крыло самолета в полете" src="img/photo-6-mobile.jpg" srcset="./img/photo-6-mobile@2x.jpg 2x">
+                    </picture>
+                  </a>
                 </div>
-              </a>
               <blockquote class="catalog__review">
                 <div class="catalog__review-container">
                   <cite class="catalog__author-name">Надежда</cite>
@@ -215,7 +215,7 @@
                 <p class="catalog__text text">Всем GM и взаимные лайки!</p>
                 <div class="catalog__likes-container">
                   <button class="catalog__likes-button">
-                    <img class="catalog__heart" alt="кнопка лайка." src="img/heart.png" srcset="img/heart@2x.png 2x">
+                    <svg class="catalog__heart" width="13" height="12" viewBox="0 0 13 12"><use href="./img/sprite.svg#heart"></use></svg>
                   </button>
                   <button class="catalog__button button-like" type="button">Нравится:<span class="catalog__likes">2560</span></button>
               </div>
@@ -232,11 +232,13 @@
         <div class="design__container">
           <div class="design__container-wrapper">
             <div class="design__image-wrapper">
-              <picture>
-                <source media="(min-width: 1200px)"  srcset="img/photo-7-desktop.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
-                <img src="img/photo-7-mobile.jpg" alt="пример фильтра, зимняя дорога, рассвет." srcset="./img/photo-7-mobile@2x.jpg 2x">
-              </picture>
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1200px)"  srcset="img/photo-7-desktop.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                  <img src="img/photo-7-mobile.jpg" alt="пример фильтра, зимняя дорога, рассвет." srcset="./img/photo-7-mobile@2x.jpg 2x">
+                </picture>
+              </a>
             </div>
             <div>
               <form class="design__filter-container" action="https://echo.htmlacademy.ru/" method="get">

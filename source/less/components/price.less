@@ -161,8 +161,8 @@
 .price__cost {
   .list-reset;
   .font-family-mixin;
-  .set-font(16px; 30px);
-  font-weight: lighter;
+  .set-font(18px; 30px);
+  font-weight: 300;
 
   @media (min-width: @desktop-width) {
     .set-font(24px; 30px);
@@ -189,11 +189,10 @@
     align-items: center;
 
     &:first-child {
-      .set-font(15px; 30px);
-      text-transform: uppercase;
+      .set-font(18px; 30px);
+      text-transform: capitalize;
       justify-content: start;
       padding-left: 20px;
-      letter-spacing: 0.6px;
     }
   }
 
@@ -219,7 +218,6 @@
     &:first-child {
       justify-content: start;
       padding-left: 15px;
-      letter-spacing: 0.6px;
     }
   }
 }

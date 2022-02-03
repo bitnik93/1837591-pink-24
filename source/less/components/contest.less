@@ -23,16 +23,18 @@
 .contest__text {
   @media (max-width: @mobile-width-only) {
     margin-top: 10px;
-    .set-font(15px; 30px);
+    .set-font(14px; 30px);
     max-width: 285px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
-    .set-font(19px; 30px);
+    .set-font(18px; 30px);
     max-width: 500px;
     margin: 0 auto;
+  }
 
-    & br {
+  .contest__text br {
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
       display: none;
     }
   }
@@ -42,15 +44,17 @@
     .set-font(19px; 30px);
     max-width: 800px;
     margin: 0 auto;
+  }
+}
 
-    & br {
-      display: none;
-    }
+.contest__text br {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
 .contest__form-text {
-  .set-font(19px; 30px);
+  .set-font(18px; 30px);
 
   @media (max-width: @mobile-width-only) {
     display: none;

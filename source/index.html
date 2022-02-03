@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="./fonts/opensans.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="./img/favicon.ico">
   </head>
@@ -71,38 +72,46 @@
                   <p class="description-list info-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
                 </li>
                 <li class="info-list__item">
-                  <h3 class="info-list__title title-list">Меняет мир<br class="info-list__br"> вокруг</h3>
+                  <h3 class="info-list__title title-list">Меняет мир<br class="info-list__br"> &nbsp;вокруг</h3>
                   <p class="info-list__description description-list">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br class="info-list__break"> &nbsp;усилить эффект</p>
                 </li>
                 <li class="info-list__item">
-                  <h3 class="info-list__title title-list">Заводит<br class="info-list__br"> новых друзей</h3>
-                  <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и<br> &nbsp;заводите новых</p>
+                  <h3 class="info-list__title title-list">Заводит<br class="info-list__br"> &nbsp;новых друзей</h3>
+                  <p class="info-list__description description-list">Ставьте лайки, комментируйте,<br> &nbsp;делитесь фотографиями с друзьями и<br> &nbsp;заводите новых</p>
                 </li>
               </ul>
               <div class="info__wrapper-phone">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="./img/phone-info-desktop.png 1x, ./img/phone-info-desktop@2x.png 2x">
-                  <source media="(min-width: 660px)" srcset="./img/phone-info-tablet.png 1x, ./img/phone-info-tablet@2x.png 2x">
-                  <img class="info__img-wrapper" src="./img/phone-info.png" alt="Поднимает настроение" srcset="./img/phone-info@2x.png 2x">
-                </picture>
-                <picture>
-                  <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop2.png 1x, ./img/phone-info-desktop2@2x.png 2x">
-                  <img class="info__wrapper-screen info__screen-wrapper" alt="Меняет мир вокруг" src="./img/phone-info-desktop2.png" srcset="./img/phone-info-desktop2@2x.png 2x">
-                  </picture>
+                <a href="#">
                   <picture>
-                  <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop3.png 1x, ./img/phone-info-desktop3@2x.png 2x">
-                  <img class="info__wrapper-screen" src="./img/phone-info-desktop3.png" alt="Заводит новых друзей" srcset="./img/phone-info-desktop3@2x.png 2x">
-                </picture>
+                    <source media="(min-width: 1200px)" srcset="./img/phone-info-desktop.png 1x, ./img/phone-info-desktop@2x.png 2x">
+                    <source media="(min-width: 660px)" srcset="./img/phone-info-tablet.png 1x, ./img/phone-info-tablet@2x.png 2x">
+                    <img class="info__img-wrapper" src="./img/phone-info.png" alt="Поднимает настроение" srcset="./img/phone-info@2x.png 2x">
+                  </picture>
+                </a>
+                <a href="#">
+                  <picture>
+                    <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop2.png 1x, ./img/phone-info-desktop2@2x.png 2x">
+                    <img class="info__wrapper-screen info__screen-wrapper" alt="Меняет мир вокруг" src="./img/phone-info-desktop2.png" srcset="./img/phone-info-desktop2@2x.png 2x">
+                  </picture>
+                </a>
+                <a href="#">
+                  <picture>
+                    <source class="info__wrapper-screen" media="(min-width: 1200px)" srcset="./img/phone-info-desktop3.png 1x, ./img/phone-info-desktop3@2x.png 2x">
+                    <img class="info__wrapper-screen" src="./img/phone-info-desktop3.png" alt="Заводит новых друзей" srcset="./img/phone-info-desktop3@2x.png 2x">
+                  </picture>
+                </a>
               </div>
             </div>
           </div>
           <div class="info__effect effect effect--desktop">
-            <svg class="effect__image" width="238" height="276" viewBox="0 0 238 276"><use href="./img/sprite.svg#effect-image"></use>
+            <a href="#">
+              <svg class="effect__image" width="238" height="276" viewBox="0 0 238 276"><use href="./img/sprite.svg#effect-image"></use>
               </svg>
-              <div class="effect__container">
-                <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
-                <p class="effect__description">Британские ученые провели исследования<br> &nbsp;и доказали,<br class="effect__break"> &nbsp;что положительный эффект<br class="effect__break-2"> &nbsp;от использования приложения длится<br> &nbsp;целые сутки!</p>
-                <a class="effect__note" href="#">Узнать больше об исследовании</a>
+            </a>
+            <div class="effect__container">
+              <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
+              <p class="effect__description">Британские ученые провели исследования<br> &nbsp;и доказали,<br class="effect__break"> &nbsp;что положительный эффект<br class="effect__break-2"> &nbsp;от использования приложения длится<br> &nbsp;целые сутки!</p>
+              <a class="effect__note" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
         </div>

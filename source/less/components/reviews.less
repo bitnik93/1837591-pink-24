@@ -21,7 +21,6 @@
 
 .reviews__item {
   .list-reset;
-  letter-spacing: 0.4px;
 
   @media (max-width: @mobile-width-only) {
     padding-top: 43px;
@@ -51,7 +50,7 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
-    margin-top: 147px;
+    margin-top: 140px;
   }
 }
 
@@ -62,17 +61,17 @@
   font-style: normal;
   font-weight: bold;
   text-align: center;
+  color: @base-color-black;
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     .set-font(20px; 30px);
     margin-top: 34px;
-    letter-spacing: 1px;
     order: 2;
   }
 
   @media (min-width: @desktop-width) {
     order: 2;
-    .set-font(25px; 30px);
+    .set-font(24px; 30px);
     margin-top: 35px;
   }
 }
@@ -80,25 +79,24 @@
 .reviews__text {
   .list-reset;
   .font-family-mixin;
-  .set-font(14px; 30px);
+  .set-font(13px; 30px);
 
   @media (min-width: @desktop-width) {
     .set-font(18px; 30px);
     order: 3;
     margin-top: 51px;
     max-width: 700px;
-    letter-spacing: 0.6px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     .set-font(18px; 30px);
     min-width: 630px;
-    letter-spacing: 0.5px;
     order: 3;
   }
 
   @media (max-width: @mobile-width-only) {
     margin-top: 12px;
+    .set-font(14px; 30px);
   }
 }
 

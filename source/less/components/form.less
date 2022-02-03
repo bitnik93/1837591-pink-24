@@ -451,12 +451,11 @@
   }
 
   &:focus {
-    border: 2px solid #d22856;
+    outline: 2px solid #d22856;
   }
 
-  &:active {
-    border: 2px solid @base-text-red;
-    border-radius: 1px;
+  &:focus-visible {
+    outline: 2px solid #d22856;
   }
 }
 
@@ -543,16 +542,22 @@
   text-transform: uppercase;
 
   @media (max-width: @mobile-width-only) {
-    max-width: 235px;
+    max-width: 245px;
   }
 }
 
 .form__title-container {
-  margin: 0 20px;
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin: 0 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 33px;
+  }
 }
 
 .form__title-contacts {
-  .set-font(13.5px; 18px);
+  .set-font(14px; 18px);
   position: absolute;
   top: 41px;
 
@@ -582,7 +587,6 @@
 
   @media (max-width: @mobile-width-only) {
     top: 32px;
-    left: 13px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -606,7 +610,7 @@
 
 .form__label {
   .list-reset;
-  .set-font(19px; 23px);
+  .set-font(18px; 23px);
   position: relative;
   font-weight: normal;
   color: @base-text-color;
@@ -616,7 +620,7 @@
 
 .form__label-radio {
   padding-left: 70px;
-  .set-font(19px; 23px);
+  .set-font(18px; 23px);
 
   @media (max-width: @mobile-width-only) {
     min-width: 50px;
@@ -670,6 +674,8 @@
 .form__text {
   .font-family-mixin;
   padding-top: 14px;
+  resize: vertical;
+  .set-font(18px; 30px);
 
   @media (max-width: @mobile-width-only) {
     min-height: 201px;
@@ -763,10 +769,6 @@ form .form__form-button {
 
 .form__required-field {
   order: 5;
-
-  @media (min-width: @tablet-width) and (max-width: 1199px) {
-    letter-spacing: -0.3px;
-  }
 }
 
 .form__required-field-adv {
