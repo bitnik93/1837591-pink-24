@@ -47,6 +47,17 @@ export const images = () => {
   .pipe(gulp.dest('build/img'))
 }
 
+// WebP
+
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
+
 // fonts
 const copy = (done) => {
   gulp.src([
@@ -97,5 +108,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  clean, copy, svg, sprite, html, styles, images, server, watcher
+  clean, copy, svg, sprite, createWebp, html, styles, images, server, watcher
 );

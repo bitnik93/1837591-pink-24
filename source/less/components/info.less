@@ -136,7 +136,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -168,17 +168,23 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    width: 100%;
   }
 }
 
 .info__img-wrapper {
+  @media (max-width: @mobile-width-only) {
+    width: 157px;
+    height: 320px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: 1199px) {
     margin-top: 34px;
+    width: 268px;
+    height: 547px;
   }
-}
 
-.info__screen-wrapper {
   @media (min-width: @desktop-width) {
-    margin: 0 13px;
+    width: 100%;
   }
 }
