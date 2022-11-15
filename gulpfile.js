@@ -43,7 +43,7 @@ export const html = () => {
 // Images
 export const images = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon.svg'])
-  .pipe(squoosh())
+  // .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
@@ -51,9 +51,9 @@ export const images = () => {
 
 const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-    .pipe(squoosh({
-      webp: {}
-    }))
+    // .pipe(squoosh({
+    //   webp: {}
+    // }))
     .pipe(gulp.dest('build/img'))
 }
 
